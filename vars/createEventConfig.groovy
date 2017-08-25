@@ -27,6 +27,5 @@ def call(String testEvent) {
   new XmlUtil().serialize(xml,writer)
  
   writer.close()
-  return fileName
 }
 
