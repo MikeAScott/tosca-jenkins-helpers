@@ -1,6 +1,8 @@
 import groovy.xml.XmlUtil
 
-def configFormat = '''<?xml version="1.0" encoding="utf-16" ?>
+def call(String testEvent) {
+
+  def configFormat = '''<?xml version="1.0" encoding="utf-16" ?>
 
 <testConfiguration>
 
@@ -13,8 +15,6 @@ def configFormat = '''<?xml version="1.0" encoding="utf-16" ?>
 </testConfiguration>
 
 '''
-
-String createConfigFile(String testEvent) {
   def fileName = "${env.WORKSPACE}/TestConfig.xml"
   echo "Creating Config File: ${fileName}"
 
