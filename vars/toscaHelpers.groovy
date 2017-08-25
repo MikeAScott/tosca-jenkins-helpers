@@ -1,3 +1,5 @@
+import groovy.xml.XmlUtil
+
 def configFormat = '''<?xml version="1.0" encoding="utf-16" ?>
 
 <testConfiguration>
@@ -27,3 +29,4 @@ String createConfigFile(String testEvent) {
   writer.close()
   return fileName
 }
+
